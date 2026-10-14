@@ -2,3 +2,6 @@
 release/*.zip
 release/*.bak
 release/logo_alt_with_pill_1280x720.jpg
+
+# private working notes (contain local paths and ids)
+NOTES.md
