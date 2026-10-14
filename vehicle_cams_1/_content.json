@@ -1,0 +1,10 @@
+{
+    "archives": null,
+    "files": [
+        "vehicle_cams/vc_main.gs.lua",
+        "vehicle_cams/vc_main.script.lua",
+        "vehicle_cams/vc_shared.lua",
+        "vehicle_cams/vc_card.script.lua",
+        "vehicle_cams/vc_card.res.lua"
+    ]
+}

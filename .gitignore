@@ -1,0 +1,4 @@
+# upload backups and scratch
+release/*.zip
+release/*.bak
+release/logo_alt_with_pill_1280x720.jpg
