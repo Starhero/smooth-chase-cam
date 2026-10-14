@@ -177,6 +177,27 @@ local VcCardContent = react.RegisterRecipe("VcCardContent", function(params)
 		children[#children + 1] = sliderRow("yaw", string.format("Angle: %d deg", math.floor(P.yaw + 0.5)),
 			function(v) return v + 180 end, function(sv) return sv - 180 end, 360,
 			"0 = straight behind. Moves the camera round to one side or the other.")
+
+		-- quick angle buttons: set the Angle slider to a standard view (sliders are rebuilt via rev so they show the new value)
+		local function setYaw(deg)
+			pcall(function()
+				local cur = st:old()
+				if not cur.synced then return end
+				local np = copyProfile(cur.profile)
+				np.yaw = deg
+				st:set(newState(cur, { profile = np, rev = cur.rev + 1 }))
+				send("set", np)
+			end)
+		end
+		children[#children + 1] = builtin.BoxLayout{
+			orientation = builtin.type.Orientation.Horizontal,
+			children = {
+				button_react_util.makeTextButton("primary", "Behind", function() setYaw(0) end, "Straight behind the vehicle.", false),
+				button_react_util.makeTextButton("primary", "Left", function() setYaw(-90) end, "From the vehicle's left side.", false),
+				button_react_util.makeTextButton("primary", "Right", function() setYaw(90) end, "From the vehicle's right side.", false),
+				button_react_util.makeTextButton("primary", "Front", function() setYaw(180) end, "In front of the vehicle, looking back at it.", false),
+			},
+		}
 	end
 
 	return builtin.BoxLayout{
