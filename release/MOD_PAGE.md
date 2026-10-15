@@ -40,6 +40,8 @@ Smooth Chase Cam puts a camera right behind any vehicle you select and keeps it 
 **Credits**
 Made by Starhero.
 
+Enjoying the mod? You can support future updates here: https://buymeacoffee.com/starhero
+
 ## Tags to pick on mod.io
 Script Mod (the only tag that fits; do not add vehicle-type tags, it adds no vehicles)
 

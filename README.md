@@ -35,5 +35,8 @@ The mod only touches the camera and the vehicle window. It is marked cosmetic, s
 ## Install by hand
 Copy the `vehicle_cams_1` folder into `.../userdata/<id>/3493540/local/mods/`.
 
+## Support
+Enjoying the mod? You can support future updates [here](https://buymeacoffee.com/starhero).
+
 ## Licence
 MIT, see `LICENSE`. Made by Starhero.
